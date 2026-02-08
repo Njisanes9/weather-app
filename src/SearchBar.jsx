@@ -1,5 +1,8 @@
 import React from 'react';
+import './App.css';
 
+
+{/*searchbar/Input*/}
 function SearchBar({ input, setInput, onSearch }) {
   return (
     <div className="search-input">

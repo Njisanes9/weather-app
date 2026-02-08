@@ -30,7 +30,7 @@ html {
     text-align: center;
     border-radius: 10px;
     padding-bottom: 20px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .current {
@@ -38,12 +38,23 @@ html {
     display: flex;
     margin-right: 10px;
     flex-direction: column; 
-    width: 400px; 
+    width: 440px; 
     background-color: #7393B3;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+.current >.results{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.current > .details{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .box{
-    width: 850px;
+    width: 800px;
     background-color: #7393B3;    
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -115,7 +126,7 @@ html {
     margin-top: auto;
 }
 
-.Loader {
+.loader {
     display: flex;
     justify-content: center;
     align-items: center;

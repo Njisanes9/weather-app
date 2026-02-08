@@ -1,12 +1,15 @@
 import React from 'react';
+import './App.css';
+
 
 function Forecast({ weather,forecast }) {
   if (!forecast.length) return null;
 
+  {/*Filters forecast*/} 
   const dailyForecast = forecast.filter(item =>
     item.dt_txt.includes("12:00:00")
   );
-
+  {/*Loading forecast details*/}
   return (
     
     <div className='box'>
