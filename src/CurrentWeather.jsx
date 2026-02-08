@@ -6,7 +6,7 @@ import './App.css';
 
 function CurrentWeather({ weather, toDateFunction }) {
 
-  // 1️⃣ Loading FIRST
+  {/*Loading */}
   if (weather.loading) {
     return (
       <div className="Loader">
@@ -15,7 +15,7 @@ function CurrentWeather({ weather, toDateFunction }) {
     );
   }
 
-  // 2️⃣ Error SECOND
+  {/*Error when no data is found*/}
   if (weather.error) {
     return (
       <div className="error-message">
@@ -25,16 +25,16 @@ function CurrentWeather({ weather, toDateFunction }) {
     );
   }
 
-  // 3️⃣ No data yet (initial state)
+  {/*Displaying when there is not data yet*/}
   if (!weather.data || !weather.data.main) {
     return (
       <div className="current">
-        <p>Search for a city to see the weather 🌍</p>
+        <p>Search for a city to see the weather </p>
       </div>
     );
   }
 
-  // 4️⃣ Valid data
+  {/*Diplaying valid data*/}
   return (
     <div className="current">
       <h2>

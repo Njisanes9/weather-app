@@ -15,11 +15,14 @@ function WeatherApp() {
   });
   const [forecast, setForecast] = useState([]);
 
+  {/*Months to display the date*/}
   const toDateFunction = () => {
     const months = [
       'January', 'February', 'March', 'April', 'May', 'June',
       'July', 'August', 'September', 'October', 'November', 'December'
     ];
+
+    {/*Days of the week to display the date*/}
     const days = [
       'Sunday', 'Monday', 'Tuesday', 'Wednesday',
       'Thursday', 'Friday', 'Saturday'
@@ -45,7 +48,7 @@ function WeatherApp() {
   };
 
   {/* Automatically get weather details based on location*/}
-const fetchWeatherByCoords = async (lat, lon) => {
+    const fetchWeatherByCoords = async (lat, lon) => {
     setWeather(prev => ({
     ...prev,
     loading: true,
@@ -178,15 +181,11 @@ const fetchWeatherByCoords = async (lat, lon) => {
         <SearchBar input={input} setInput={setInput} onSearch={search} />
         <div className='container'>
     
-            {/* Current Weather */}
-             
-            <CurrentWeather weather={weather} toDateFunction={toDateFunction} />
-            
+            {/* Current Weather */}             
+            <CurrentWeather weather={weather} toDateFunction={toDateFunction} />            
 
-            {/* 5 days forecast */}
-            
-            <Forecast weather={weather} forecast={forecast} />
-            
+            {/* 5 days forecast */}           
+            <Forecast weather={weather} forecast={forecast} />            
             
         </div>
     </>
